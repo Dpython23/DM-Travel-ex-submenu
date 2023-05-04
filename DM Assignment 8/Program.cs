@@ -1,6 +1,7 @@
 ﻿using System.Reflection.Metadata.Ecma335;
 using System.Xml.Linq;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace DM_Assignment_8
 {
@@ -65,7 +66,7 @@ namespace DM_Assignment_8
             Console.Write("Enter a name: ");
             string name = Console.ReadLine();
             Console.Clear();
-            string filename = name + ".txt";
+            string filename = name + ".json";
             string path = @"C:\IT\TravExApp\" + filename;
             int TryAgain;
             int TravEx;
@@ -120,10 +121,10 @@ namespace DM_Assignment_8
                     Console.Clear();
 
 
-                    using (StreamWriter sw = File.CreateText(path))
-                    {
-                        sw.WriteLine("This is a new file created by the program.");
-                    }
+                    string jsonString = JsonConvert.SerializeObject(newUser, Formatting.Indented);
+
+                    File.WriteAllText(path, jsonString);
+
 
                     Console.WriteLine($"File {filename} created successfully at {path}!");
                     Console.WriteLine();
@@ -182,8 +183,7 @@ namespace DM_Assignment_8
                             Console.WriteLine("You chose to go to the Main Menu");
                             Console.WriteLine();
                             Console.WriteLine("Press enter to continue");
-                            MainMenu();
-                            Edit(name);
+                            Choice(MainMenu());
                             break;
 
                         case 4:
@@ -248,7 +248,7 @@ namespace DM_Assignment_8
             foreach (string fileName in fileEntries)
             {
                 string[] parts = fileName.Split('\\');
-                string name = parts[parts.Length - 1].Replace(".txt", "");
+                string name = parts[parts.Length - 1].Replace(".json", "");
                 Console.WriteLine(name);
             }
             Console.WriteLine();
@@ -361,7 +361,7 @@ namespace DM_Assignment_8
             
             //if edit read file and ask which one you want to edit
             //if new one create file, give an id number for jpirney, ask how many miles, and how much.
-
+            
             int selection = MainMenu();
             Choice(selection);
         }
