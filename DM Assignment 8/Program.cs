@@ -29,6 +29,7 @@ namespace DM_Assignment_8
                 Console.WriteLine();
                 Console.WriteLine("Type 1 for Start ");
                 Console.WriteLine("Type 2 for Exit App");
+                Console.WriteLine();
 
                 selection = Convert.ToInt16(Console.ReadLine());
 
@@ -47,6 +48,7 @@ namespace DM_Assignment_8
                     Console.WriteLine("You have chosen to enter details");
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue");
+                    Console.WriteLine();
                     Console.ReadLine();
                     Console.Clear();
                     UserDeets();
@@ -54,6 +56,7 @@ namespace DM_Assignment_8
                 case 2:
                     Console.Clear();
                     Console.WriteLine("Goodbye. Press any key to close");
+                    Console.WriteLine();
                     Console.ReadLine();
                     Environment.Exit(0);
                     break;
@@ -64,6 +67,7 @@ namespace DM_Assignment_8
         {
             Console.Clear();
             Console.Write("Enter a name: ");
+            Console.WriteLine();
             string name = Console.ReadLine();
             Console.Clear();
             string filename = name + ".json";
@@ -88,7 +92,7 @@ namespace DM_Assignment_8
                     Console.WriteLine("Type 1 to try again");
                     Console.WriteLine("Type 2 to Main menu");
                     Console.WriteLine("Type 3 to edit");
-
+                    Console.WriteLine();
                     TryAgain = Convert.ToInt16(Console.ReadLine());
 
                     switch (TryAgain)
@@ -105,7 +109,6 @@ namespace DM_Assignment_8
                             break;
                     }
                 }
-
                 else
                 {
                     //creates a new instance of user
@@ -135,6 +138,7 @@ namespace DM_Assignment_8
                     Console.WriteLine();
                     Console.WriteLine("Type 1 for yes");
                     Console.WriteLine("Type 2 for no");
+                    Console.WriteLine();
                     View = Convert.ToInt16(Console.ReadLine());
 
                     switch (View)
@@ -160,6 +164,7 @@ namespace DM_Assignment_8
                     Console.WriteLine("Type 2 for Travel and Expense");
                     Console.WriteLine("Type 3 for the Main Menu");
                     Console.WriteLine("Type 4 to edit " + name);
+                    Console.WriteLine();
                     TravEx = Convert.ToInt16(Console.ReadLine());
 
                     switch (TravEx)
@@ -225,7 +230,8 @@ namespace DM_Assignment_8
             {
                 Console.Clear();
                 Console.WriteLine("Please choose 1 or 2");
-                Console.WriteLine(" Press enter to continue");
+                Console.WriteLine();
+                Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
                 Console.Clear();
                 fin = true;
@@ -250,6 +256,7 @@ namespace DM_Assignment_8
                 string[] parts = fileName.Split('\\');
                 string name = parts[parts.Length - 1].Replace(".json", "");
                 Console.WriteLine(name);
+                ViewJson(fileName);
             }
             Console.WriteLine();
             Console.WriteLine("Press enter to continue");
@@ -257,6 +264,20 @@ namespace DM_Assignment_8
             Console.Clear();
 
         }
+
+        static void ViewJson(string path)
+        {
+            // Read the JSON file content
+            string jsonContent = File.ReadAllText(path);
+
+            // Deserialize the JSON content into a UserC object
+            UserC user = JsonConvert.DeserializeObject<UserC>(jsonContent);
+
+            // Display the user details
+            Console.WriteLine($"Name: {user.Name}");
+            Console.WriteLine($"Id: {user.Id}");
+        }
+
         //##################### Methods End ####################################
 
         //##################### Classes Start ##################################
