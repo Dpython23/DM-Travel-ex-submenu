@@ -267,6 +267,8 @@ namespace DM_Assignment_8
 
         static void ViewJson(string path)
         {
+            try
+            { 
             // Read the JSON file content
             string jsonContent = File.ReadAllText(path);
 
@@ -276,6 +278,12 @@ namespace DM_Assignment_8
             // Display the user details
             Console.WriteLine($"Name: {user.Name}");
             Console.WriteLine($"Id: {user.Id}");
+            }
+            catch (JsonReaderException ex)
+            {
+                Console.WriteLine($"Error in file: {path}");
+                Console.WriteLine($"Error message: {ex.Message}");
+            }
         }
 
         //##################### Methods End ####################################
