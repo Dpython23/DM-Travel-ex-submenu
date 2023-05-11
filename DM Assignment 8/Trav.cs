@@ -8,9 +8,11 @@ namespace DM_Assignment_8
 {
     public class TravClass
     {
-        public static void Trav(string name)
+        public string destination;
+
+        public static void Trav(double miles, double cost)
         {
-            //Method that calculates travel
+            miles * Cost
         }
     }
 }

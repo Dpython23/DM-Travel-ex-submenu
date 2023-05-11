@@ -23,6 +23,7 @@ namespace DM_Assignment_8
             int TravEx;
             int View;
             bool fin = false;
+            string destination;
 
             do
             {
@@ -87,6 +88,7 @@ namespace DM_Assignment_8
                     Console.WriteLine("Type 2 for no");
                     Console.WriteLine();
                     View = Convert.ToInt16(Console.ReadLine());
+                    Console.Clear();
 
                     switch (View)
                     {
@@ -103,16 +105,19 @@ namespace DM_Assignment_8
                             Console.WriteLine();
                             Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
+                            Console.Clear();
                             break;
                     }
 
-
+                    Console.WriteLine("Do you want to enter travel or travel and expenses?");
+                    Console.WriteLine();
                     Console.WriteLine("Type 1 for Travel");
                     Console.WriteLine("Type 2 for Travel and Expense");
                     Console.WriteLine("Type 3 for the Main Menu");
                     Console.WriteLine("Type 4 to edit " + name);
                     Console.WriteLine();
                     TravEx = Convert.ToInt16(Console.ReadLine());
+                    Console.Clear();
 
                     switch (TravEx)
                     {
@@ -121,6 +126,10 @@ namespace DM_Assignment_8
                             Console.WriteLine();
                             Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
+                            Console.Clear();
+                            Console.WriteLine("Were did you go?");
+                            Console.WriteLine();
+                            destination = Convert.ToInt16(Console.ReadLine());
                             TravClass.Trav(name);
                             break;
 
