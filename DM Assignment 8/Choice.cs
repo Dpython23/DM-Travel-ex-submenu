@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DM_Assignment_8
 {
     public class ChoiceClass
@@ -20,7 +21,8 @@ namespace DM_Assignment_8
                     Console.WriteLine();
                     Console.ReadLine();
                     Console.Clear();
-                    UserDeetsClass.UserDeets();
+                    SubMenuClass.SubMenu();
+                   // UserDeetsClass.UserDeets();
                     break;
                 case 2:
                     Console.Clear();

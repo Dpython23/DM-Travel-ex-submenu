@@ -31,6 +31,8 @@ namespace DM_Assignment_8
                 selection = Convert.ToInt16(Console.ReadLine());
 
                 fin = OneTwoClass.OneTwo(selection);
+
+                // sort out error  hadling for non numerals
             }
             while (fin == true);
             return selection;

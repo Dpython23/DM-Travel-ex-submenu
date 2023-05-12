@@ -37,9 +37,9 @@ namespace DM_Assignment_8
                 {
                     Console.Clear();
                     Console.WriteLine($"A file with the name {filename} already exists!\n\n");
-                    Console.WriteLine("Type 1 to try again");
-                    Console.WriteLine("Type 2 to Main menu");
-                    Console.WriteLine("Type 3 to edit");
+                    Console.WriteLine("Type 1 and enter to try again");
+                    Console.WriteLine("Type 2 and enter for Main menu");
+                    Console.WriteLine("Type 3 and enter for edit");
                     Console.WriteLine();
                     TryAgain = Convert.ToInt16(Console.ReadLine());
 
@@ -53,7 +53,7 @@ namespace DM_Assignment_8
                             break;
                         case 3:
                             Console.WriteLine("You chose to edit" + name);
-                            EditClass.Edit(name);
+                            EditClass.Edit(name); //write Edit class
                             break;
                     }
                 }

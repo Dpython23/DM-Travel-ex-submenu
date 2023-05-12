@@ -12,7 +12,7 @@ namespace DM_Assignment_8
 
         public static void Trav(double miles, double cost)
         {
-            miles * Cost
+            miles * cost;
         }
     }
 }
