@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class MainMenuClass
+    public class StartClass
     {
-        public static int MainMenu()
+        public static int Start()
         {
             bool fin;
             int selection;
             do
             {
-                Console.WriteLine("---------- Main Menu ------------------");
+                Console.WriteLine("---------------------------------------");
                 Console.WriteLine("-                                     -");
                 Console.WriteLine("-  Welcome to the Travel Expences App -");
                 Console.WriteLine("-                                     -");

@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ namespace DM_Assignment_8
             Console.Clear();
             Console.Write("Enter a name: ");
             Console.WriteLine();
-            string name = Console.ReadLine();
+            string? name = Console.ReadLine();
             Console.Clear();
             string filename = name + ".json";
             string path = @"C:\IT\TravExApp\" + filename;
@@ -23,7 +24,7 @@ namespace DM_Assignment_8
             int TravEx;
             int View;
             bool fin = false;
-            string destination;
+            //string destination;
 
             do
             {
@@ -49,18 +50,18 @@ namespace DM_Assignment_8
                             UserDeets();
                             break;
                         case 2:
-                            MainMenuClass.MainMenu();
+                            StartClass.Start();
                             break;
                         case 3:
                             Console.WriteLine("You chose to edit" + name);
-                            EditClass.Edit(name); //write Edit class
+                            //EditClass.Edit(name); //write Edit class
                             break;
                     }
                 }
                 else
                 {
                     //creates a new instance of user
-                    UserClass newUser = new UserClass(name);
+                    UserClass? newUser = new UserClass(name);
                     // Creates a new file with the name entered by the user
                     Console.WriteLine("A new user has been created");
                     Console.WriteLine();
@@ -129,29 +130,29 @@ namespace DM_Assignment_8
                             Console.Clear();
                             Console.WriteLine("Were did you go?");
                             Console.WriteLine();
-                            destination = Convert.ToInt16(Console.ReadLine());
-                            TravClass.Trav(name);
+                            //destination = Convert.ToInt16(Console.ReadLine());
+                            //TravClass.Trav(name);
                             break;
 
                         case 2:
                             Console.WriteLine("You chose to enter a new travel and expense record");
                             Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
-                            ExpenseClass.Expense(name);
+                           // ExpenseClass.Expense(name);
                             break;
 
                         case 3:
                             Console.WriteLine("You chose to go to the Main Menu");
                             Console.WriteLine();
                             Console.WriteLine("Press enter to continue");
-                            ChoiceClass.Choice(MainMenuClass.MainMenu());
+                            ChoiceClass.Choice(StartClass.Start());
                             break;
 
                         case 4:
                             Console.WriteLine("You chose to edit " + name);
                             Console.WriteLine();
                             Console.WriteLine("Press enter to continue");
-                            EditClass.Edit(name);
+                           // EditClass.Edit(name);
                             break;
                     }
                 }

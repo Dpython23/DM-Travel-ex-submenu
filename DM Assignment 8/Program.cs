@@ -7,18 +7,13 @@ namespace DM_Assignment_8
 {
     internal class Program
     {
-        
-
-       
 
         static void Main(string[] args)
         {
-            //look up auto getset in vs
 
-           
-
-            int selection = MainMenuClass.MainMenu();
+            int selection = StartClass.Start();
             ChoiceClass.Choice(selection);
+            SMControllerClass.SMController(option);
         }
     }
 }
