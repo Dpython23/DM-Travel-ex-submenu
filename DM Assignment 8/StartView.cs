@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class StartClass
+    public class StartViewClass
     {
         public static int Start()
         {

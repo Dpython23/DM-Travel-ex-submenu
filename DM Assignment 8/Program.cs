@@ -11,7 +11,7 @@ namespace DM_Assignment_8
         static void Main(string[] args)
         {
 
-            int selection = StartClass.Start();
+            int selection = StartViewClass.Start();
             ChoiceClass.Choice(selection);
             SMControllerClass.SMController(option);
         }

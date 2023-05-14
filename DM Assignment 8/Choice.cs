@@ -21,7 +21,7 @@ namespace DM_Assignment_8
                     Console.WriteLine();
                     Console.ReadLine();
                     Console.Clear();
-                    SubMenuClass.SubMenu();
+                    SubMenuViewClass.SubMenu();
                    // UserDeetsClass.UserDeets();
                     break;
                 case 2:

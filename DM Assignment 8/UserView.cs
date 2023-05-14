@@ -9,9 +9,9 @@ using static DM_Assignment_8.Program;
 
 namespace DM_Assignment_8
 {
-    public class UserDeetsClass
+    public class UserViewClass
     {
-        public static void UserDeets()
+        public static void User()
         {
             Console.Clear();
             Console.Write("Enter a name: ");
@@ -47,10 +47,10 @@ namespace DM_Assignment_8
                     switch (TryAgain)
                     {
                         case 1:
-                            UserDeets();
+                            User();
                             break;
                         case 2:
-                            StartClass.Start();
+                            StartViewClass.Start();
                             break;
                         case 3:
                             Console.WriteLine("You chose to edit" + name);
