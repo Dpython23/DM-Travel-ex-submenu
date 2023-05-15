@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using  DM_Assignment_8.Program;
+// static DM_Assignment_8.Program;
 
 namespace DM_Assignment_8
 {
     public class SubMenuViewClass
     {
-        public static int SubMenu()
+        public  int SubMenu()
         {
             int option;
             Console.Clear();

@@ -10,7 +10,12 @@ namespace DM_Assignment_8
 
 	public class SMControllerClass
 	{
-		public static void SMController(option)
+        StartViewClass startView = new StartViewClass();
+        int selection = StartViewClass.StartView();
+
+        StartControllerClass startController = new StartControllerClass();
+        startController.StartController(selection);
+		public  void SMController(int option)
 		{
             switch (option)
             {
@@ -45,10 +50,12 @@ namespace DM_Assignment_8
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
-                    StartViewClass.Start();
+                    Console.Clear();
+                    Console.Clear();
+                    StartViewClass.StartView();
+                    break;
             }
         }
 
         }
 	}
-}

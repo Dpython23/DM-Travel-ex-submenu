@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
 
 namespace DM_Assignment_8
 {
-    public class ChoiceClass
+    public class StartControllerClass
     {
-        public static void Choice(int selection)
+        public void StartController(int selection)
         {
+            
             switch (selection)
             {
                 case 1:
@@ -21,8 +23,10 @@ namespace DM_Assignment_8
                     Console.WriteLine();
                     Console.ReadLine();
                     Console.Clear();
-                    SubMenuViewClass.SubMenu();
-                   // UserDeetsClass.UserDeets();
+                    SubMenuViewClass subMenuView = new SubMenuViewClass();
+                    int option = subMenuView.SubMenu();
+                    SMControllerClass sMController = new SMControllerClass();
+                    sMController.SMController(option);
                     break;
                 case 2:
                     Console.Clear();
@@ -32,6 +36,8 @@ namespace DM_Assignment_8
                     Environment.Exit(0);
                     break;
             }
+
+            
         }
     }
 }

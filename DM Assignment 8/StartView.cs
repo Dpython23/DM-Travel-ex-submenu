@@ -8,10 +8,11 @@ namespace DM_Assignment_8
 {
     public class StartViewClass
     {
-        public static int Start()
+        public  int  StartView()
         {
             bool fin;
             int selection;
+            Console.Clear();
             do
             {
                 Console.WriteLine("---------------------------------------");
@@ -30,12 +31,24 @@ namespace DM_Assignment_8
 
                 selection = Convert.ToInt16(Console.ReadLine());
 
-                fin = OneTwoClass.OneTwo(selection);
-
+                if (selection == 1 || selection == 2)
+                {
+                    fin = false;
+                }
+                else
+                {
+                    Console.WriteLine("Please type 1 or 2 with enter nly");
+                    Console.ReadLine();
+                    fin = true;
+                }
                 // sort out error  hadling for non numerals
             }
             while (fin == true);
+
+
+
             return selection;
+            
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-public class Class1
+public class ExpenseViewClass
 {
-	public Class1()
+	public static void ExpenseView()
 	{
 	}
 }

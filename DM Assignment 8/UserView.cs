@@ -43,6 +43,9 @@ namespace DM_Assignment_8
                     Console.WriteLine("Type 3 and enter for edit");
                     Console.WriteLine();
                     TryAgain = Convert.ToInt16(Console.ReadLine());
+                    StartControllerClass startController = new StartControllerClass();
+                    StartViewClass startView = new StartViewClass();
+                    int selection = StartViewClass.StartView();
 
                     switch (TryAgain)
                     {
@@ -50,7 +53,7 @@ namespace DM_Assignment_8
                             User();
                             break;
                         case 2:
-                            StartViewClass.Start();
+                            startController.StartController(selection);
                             break;
                         case 3:
                             Console.WriteLine("You chose to edit" + name);
@@ -145,7 +148,7 @@ namespace DM_Assignment_8
                             Console.WriteLine("You chose to go to the Main Menu");
                             Console.WriteLine();
                             Console.WriteLine("Press enter to continue");
-                            ChoiceClass.Choice(StartClass.Start());
+                            StartViewClass.StartView();
                             break;
 
                         case 4:
