@@ -5,86 +5,50 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static DM_Assignment_8.Program;
+//using static DM_Assignment_8.Program;
 
 namespace DM_Assignment_8
 {
     public class UserViewClass
     {
         public static void User()
-        {
-            Console.Clear();
-            Console.Write("Enter a name: ");
-            Console.WriteLine();
-            string? name = Console.ReadLine();
-            Console.Clear();
-            string filename = name + ".json";
-            string path = @"C:\IT\TravExApp\" + filename;
-            int TryAgain;
-            int TravEx;
-            int View;
-            bool fin = false;
-            //string destination;
-
+        { bool fin;
+            int UOption;
             do
             {
-                //if the folder doesnt exist, create it.
-                if (!Directory.Exists(@"C:\IT\TravExApp"))
-                {
-                    Directory.CreateDirectory(@"C:\IT\TravExApp");
-                }
-                // Check if the file already exists
-                if (File.Exists(path))
-                {
-                    Console.Clear();
-                    Console.WriteLine($"A file with the name {filename} already exists!\n\n");
-                    Console.WriteLine("Type 1 and enter to try again");
-                    Console.WriteLine("Type 2 and enter for Main menu");
-                    Console.WriteLine("Type 3 and enter for edit");
-                    Console.WriteLine();
-                    TryAgain = Convert.ToInt16(Console.ReadLine());
-                    StartControllerClass startController = new StartControllerClass();
-                    StartViewClass startView = new StartViewClass();
-                    int selection = StartViewClass.StartView();
+                Console.Clear();
+                Console.WriteLine("Type 1 and enter for new User);
+                Console.WriteLine("Type 2 and enter for view user");
+                Console.WriteLine("Type 3 and enter for edit user");
+                Console.WriteLine("Type 4 and enter for main menu");
+                Console.WriteLine();
+                UOption = Convert.ToInt16(Console.ReadLine());
+                Console.Clear();
 
-                    switch (TryAgain)
-                    {
-                        case 1:
-                            User();
-                            break;
-                        case 2:
-                            startController.StartController(selection);
-                            break;
-                        case 3:
-                            Console.WriteLine("You chose to edit" + name);
-                            //EditClass.Edit(name); //write Edit class
-                            break;
-                    }
+                if (selection == 1 || selection == 2 || selection == 3 || selection == 4)
+                {
+                    fin = false;
                 }
                 else
                 {
-                    //creates a new instance of user
-                    UserClass? newUser = new UserClass(name);
-                    // Creates a new file with the name entered by the user
-                    Console.WriteLine("A new user has been created");
-                    Console.WriteLine();
-                    Console.WriteLine($"Name: {newUser.Name}");
-                    Console.WriteLine($"Id: {newUser.Id}");
-                    Console.WriteLine();
-                    Console.WriteLine("Press enter to continue");
+                    Console.WriteLine("Please type 1 to 4 with enter only");
                     Console.ReadLine();
-                    Console.Clear();
+                    fin = true;
+                }
+
+            }
+            while (fin == true);
+
+            return UOption;
+            Console.Clear();
+        }
 
 
-                    string jsonString = JsonConvert.SerializeObject(newUser, Formatting.Indented);
 
-                    File.WriteAllText(path, jsonString);
+          
+           
 
-
-                    Console.WriteLine($"File {filename} created successfully at {path}!");
-                    Console.WriteLine();
-                    Console.WriteLine("Press enter to continue");
-                    Console.ReadLine();
+                   
                     Console.Clear();
                     Console.WriteLine("Do you want to view users?");
                     Console.WriteLine();
@@ -101,7 +65,7 @@ namespace DM_Assignment_8
                             Console.WriteLine();
                             Console.WriteLine("Press enter to continue");
                             Console.ReadLine();
-                            ViewUsersClass.ViewUsers(newUser);
+                            UserNewClass.UserNewView();
                             break;
 
                         case 2:

@@ -37,11 +37,11 @@ namespace DM_Assignment_8
                 }
                 else
                 {
-                    Console.WriteLine("Please type 1 or 2 with enter nly");
+                    Console.WriteLine("Please type 1 or 2 with enter only");
                     Console.ReadLine();
                     fin = true;
                 }
-                // sort out error  hadling for non numerals
+                // sort out error  handling for non numerals
             }
             while (fin == true);
 
