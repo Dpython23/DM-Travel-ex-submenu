@@ -4,10 +4,12 @@ public class UserFileClass
 {
     string filename = name + ".json";
     string path = @"C:\IT\TravExApp\" + filename;
+    int TryAgain;
+    bool
 
 
-    public UserFile()
-	{
+    public void UserFile()
+    {
         do
         {
             //if the folder doesnt exist, create it.
@@ -32,7 +34,7 @@ public class UserFileClass
                 switch (TryAgain)
                 {
                     case 1:
-                        User();
+                        UserFile();
                         break;
                     case 2:
                         startController.StartController(selection);
@@ -55,4 +57,8 @@ public class UserFileClass
 
 
             }
+        }
+        while (true);
+    }
+
 }

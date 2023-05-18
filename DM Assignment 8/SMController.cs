@@ -14,7 +14,7 @@ namespace DM_Assignment_8
         int selection = StartViewClass.StartView();
 
         StartControllerClass startController = new StartControllerClass();
-        startController.StartController(selection);
+        StartControllerClass.StartController(selection);
 		public  void SMController(int option)
 		{
             switch (option)

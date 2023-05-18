@@ -10,6 +10,11 @@ namespace DM_Assignment_8
 {
     public class StartControllerClass
     {
+        SubMenuViewClass subMenuView = new SubMenuViewClass();
+        int option = subMenuView.SubMenu();
+        SMControllerClass sMController = new SMControllerClass();
+
+
         public void StartController(int selection)
         {
             
@@ -23,9 +28,6 @@ namespace DM_Assignment_8
                     Console.WriteLine();
                     Console.ReadLine();
                     Console.Clear();
-                    SubMenuViewClass subMenuView = new SubMenuViewClass();
-                    int option = subMenuView.SubMenu();
-                    SMControllerClass sMController = new SMControllerClass();
                     sMController.SMController(option);
                     break;
                 case 2:

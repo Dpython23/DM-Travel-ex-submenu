@@ -12,6 +12,7 @@ namespace DM_Assignment_8
         public static void ViewUsers(UserClass newUser)
         {
 
-       
+
+        }
     }
 }
