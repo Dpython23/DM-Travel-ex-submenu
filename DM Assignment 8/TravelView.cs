@@ -30,7 +30,7 @@ public class TravelViewClass
                 break;
 
             case 2:
-                Console.WriteLine("You chose to enter a new travel and expense record");
+                Console.WriteLine("You chose to edit a travel record");
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
                 // ExpenseClass.Expense(name);
@@ -43,12 +43,7 @@ public class TravelViewClass
                 StartViewClass.StartView();
                 break;
 
-            case 4:
-                Console.WriteLine("You chose to edit " + name);
-                Console.WriteLine();
-                Console.WriteLine("Press enter to continue");
-                // EditClass.Edit(name);
-                break;
+           
         }
     }
 }

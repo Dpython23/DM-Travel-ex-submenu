@@ -8,39 +8,43 @@ using System.Threading.Tasks;
 namespace DM_Assignment_8
 {
 
-	public class SMControllerClass
-	{
-        
-		public  void SMController(int option)
-		{
+    public class TravelChoiceClass
+    {
+       
+		public void TravelChoice(int trav)
+        {
             switch (option)
             {
                 case 1:
                     Console.Clear();
-                    Console.WriteLine("You have chosen user options");
+                    Console.WriteLine("You have chosen new user");
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                     Console.Clear();
 
-                    UserChoiceClass userChoice = new UserChoiceClass();
-                    UserChoiceClass.UserChoice();
+                    UserNewClass userNew = new UserNewClass();
+                    userNew.UserNew();
+                    UserFileClass userFile = new UserFileClass();
+                    userFile.UserFile();
+
                     break;
                 case 2:
                     Console.Clear();
-                    Console.WriteLine("You have chosen travel optons");
+                    Console.WriteLine("You have chosen view users");
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
-                    TravelViewClass.TravelView();
+                    userNew.UserView();
                     break;
                 case 3:
                     Console.Clear();
-                    Console.WriteLine("You have chosen travel and expense optons");
+                    Console.WriteLine("You have chosen to edit user");
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
-                    ExpenseViewClass.ExpenseView();
+                    UserEditClass userEdit = new UserEditClass();
+                    userEdit.UserEdit();
                     break;
                 case 4:
                     Console.Clear();
@@ -49,16 +53,11 @@ namespace DM_Assignment_8
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
                     Console.Clear();
-
-                    StartViewClass startView = new StartViewClass();
-                    int selection = StartViewClass.StartView();
-                    StartControllerClass startController = new StartControllerClass();
-                    StartControllerClass.StartController(selection);
-
+                    Console.Clear();
                     StartViewClass.StartView();
                     break;
             }
         }
 
-        }
-	}
+    }
+}

@@ -11,7 +11,7 @@ namespace DM_Assignment_8
 {
     public class UserViewClass
     {
-        public static void User()
+        public void User()
         {
             bool fin;
             int UOption;

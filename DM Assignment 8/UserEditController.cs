@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class EditClass
+    public class UserEditClass
     {
-        public static void Edit(string name)
+        public static void UserEdit(string name)
         {
 
         }
