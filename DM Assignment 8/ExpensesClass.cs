@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class ExpensesClass
+    public static class ExpensesClass
     {
         private string item;
         private double itemCost;
@@ -14,7 +14,7 @@ namespace DM_Assignment_8
         private static int previousId = 0;
 
         //Constructer
-        public ExpensesClass(string item, double itemCost)
+        public  ExpensesClass(string item, double itemCost)
         {
             this.item = item;
             this.itemCost = 0;

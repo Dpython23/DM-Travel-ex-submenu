@@ -48,3 +48,7 @@ namespace DM_Assignment_8
     }
 
 }
+
+
+
+//all menu systems wil be static

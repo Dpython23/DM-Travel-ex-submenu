@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class SubMenuViewClass
+    public static class SubMenuViewClass
     {
-        public  int SubMenu()
+        public static int SubMenu()
         {
             int option;
             Console.Clear();

@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 namespace DM_Assignment_8
 {
 
-    public class TravelChoiceClass
+    public static class TravelChoiceClass
     {
        
-		public void TravelChoice(int trav)
+		public static void TravelChoice(int trav)
         {
             switch (option)
             {

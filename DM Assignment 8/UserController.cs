@@ -2,7 +2,7 @@
 
 public class UserControllerClass
 {
-	public Usercontroller()
+	public static void Usercontroller()
 	{
 
 	}

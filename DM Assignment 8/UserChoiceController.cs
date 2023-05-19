@@ -11,13 +11,20 @@ namespace DM_Assignment_8
 	public class UserChoiceClass
 	{
 		UserViewClass userView = new UserViewClass();
-		int UOption = UserViewClass.User();
+		int UOption = userView.User();
+		int selection;
 
 		StartControllerClass startController = new StartControllerClass();
-		StartControllerClass.StartController(selection);
+
+		public UserChoiceClass()
+		{
+			startController.StartController(selection);
+		}
+
+		
 		public void UserChoice(int UOption)
 		{
-			switch (option)
+			switch (UOption)
 			{
 				case 1:
 					Console.Clear();

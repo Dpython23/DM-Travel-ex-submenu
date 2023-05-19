@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class TravClass
+    public static class TravClass
     {
-        public string? destination;
+        public  string? destination;
         
        
 

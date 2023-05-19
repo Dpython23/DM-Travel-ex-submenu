@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class StartViewClass
+    public static class StartViewClass
     {
-        public  int  StartView()
+        public static int  StartView()
         {
             bool fin;
             int selection;

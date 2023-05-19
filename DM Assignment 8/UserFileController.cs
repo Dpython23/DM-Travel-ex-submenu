@@ -2,14 +2,16 @@
 
 public class UserFileClass
 {
-    string filename = name + ".json";
-    string path = @"C:\IT\TravExApp\" + filename;
-    int TryAgain;
-    bool
+    
 
-
-    public void UserFile()
+    public static void UserFile()
     {
+        string name;
+        string filename = name + ".json";
+        string path = @"C:\IT\TravExApp\" + filename;
+        int TryAgain;
+        bool Try = true;
+
         do
         {
             //if the folder doesnt exist, create it.
@@ -55,10 +57,10 @@ public class UserFileClass
                 Console.WriteLine("Press enter to continue");
                 Console.ReadLine();
 
-
+                Try = false;
             }
         }
-        while (true);
+        while (Try == true);
     }
 
 }

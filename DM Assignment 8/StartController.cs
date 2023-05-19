@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class StartControllerClass
+    public static class StartControllerClass
     {
         
 
 
-        public void StartController(int selection)
+        public static void StartController(int selection)
         {
             
             switch (selection)
