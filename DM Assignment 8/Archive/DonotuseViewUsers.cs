@@ -9,7 +9,7 @@ namespace DM_Assignment_8
 {
     public class ViewUsersClass
     {
-        public static void ViewUsers(UserClass newUser)
+        public  void ViewUsers(UserClass newUser)
         {
 
 

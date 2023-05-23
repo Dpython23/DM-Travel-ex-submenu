@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class UserViewClass
+    public static class UserViewClass
     {
-        public void User()
+        public static int User()
         {
             bool fin;
             int UOption;
@@ -26,7 +26,7 @@ namespace DM_Assignment_8
                 UOption = Convert.ToInt16(Console.ReadLine());
                 Console.Clear();
 
-                if (selection == 1 || selection == 2 || selection == 3 || selection == 4)
+                if (UOption == 1 || UOption == 2 || UOption == 3 || UOption == 4)
                 {
                     fin = false;
                 }
@@ -40,7 +40,6 @@ namespace DM_Assignment_8
             while (fin == true);
 
             return UOption;
-            Console.Clear();
         }
 
 

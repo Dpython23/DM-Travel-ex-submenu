@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class TravelClass
+    public  class TravelClass
     {
         private string destination;
         private double cost;

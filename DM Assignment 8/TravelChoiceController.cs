@@ -8,10 +8,11 @@ using System.Threading.Tasks;
 namespace DM_Assignment_8
 {
 
-    public static class TravelChoiceClass
+    public  class TravelChoiceClass
     {
+        int option;
        
-		public static void TravelChoice(int trav)
+		public  void TravelChoice(int trav)
         {
             switch (option)
             {
@@ -25,8 +26,7 @@ namespace DM_Assignment_8
 
                     UserNewClass userNew = new UserNewClass();
                     userNew.UserNew();
-                    UserFileClass userFile = new UserFileClass();
-                    userFile.UserFile();
+                    UserFileClass.UserFile();
 
                     break;
                 case 2:
@@ -35,7 +35,7 @@ namespace DM_Assignment_8
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
-                    userNew.UserView();
+                 //   userNew.UserView();
                     break;
                 case 3:
                     Console.Clear();
@@ -43,8 +43,8 @@ namespace DM_Assignment_8
                     Console.WriteLine();
                     Console.WriteLine("Press enter to continue");
                     Console.ReadLine();
-                    UserEditClass userEdit = new UserEditClass();
-                    userEdit.UserEdit();
+                 //   UserEditClass userEdit = new UserEditClass();
+                   // userEdit.UserEdit();
                     break;
                 case 4:
                     Console.Clear();

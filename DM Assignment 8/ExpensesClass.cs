@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public static class ExpensesClass
+    public  class ExpensesClass
     {
         private string item;
         private double itemCost;

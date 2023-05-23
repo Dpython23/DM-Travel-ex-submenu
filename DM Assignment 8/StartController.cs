@@ -10,8 +10,6 @@ namespace DM_Assignment_8
 {
     public static class StartControllerClass
     {
-        
-
 
         public static void StartController(int selection)
         {
@@ -27,11 +25,8 @@ namespace DM_Assignment_8
                     Console.ReadLine();
                     Console.Clear();
 
-                    SubMenuViewClass subMenuView = new SubMenuViewClass();
-                    int option = subMenuView.SubMenu();
-                    SMControllerClass sMController = new SMControllerClass();
-
-                    sMController.SMController(option);
+                    int option = SubMenuViewClass.SubMenu();
+                    SMControllerClass.SMController(option);
                     break;
                 case 2:
                     Console.Clear();

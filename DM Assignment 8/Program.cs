@@ -8,14 +8,10 @@ namespace DM_Assignment_8
 {
     public static class Program
     {
-
         static void Main(string[] args)
         {
-
-            
             int selection = StartViewClass.StartView();
-            startController.StartController(selection);
-            
+            StartControllerClass.StartController(selection);
         }
     }
 }

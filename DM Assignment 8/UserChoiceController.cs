@@ -8,21 +8,19 @@ using System.Threading.Tasks;
 namespace DM_Assignment_8
 {
 
-	public class UserChoiceClass
+	public  class UserChoiceClass
 	{
-		UserViewClass userView = new UserViewClass();
-		int UOption = userView.User();
+		int UOption = UserViewClass.User();
 		int selection;
 
-		StartControllerClass startController = new StartControllerClass();
 
-		public UserChoiceClass()
+		public  UserChoiceClass()
 		{
-			startController.StartController(selection);
+            StartControllerClass.StartController(selection);
 		}
 
 		
-		public void UserChoice(int UOption)
+		public static void UserChoice(int UOption)
 		{
 			switch (UOption)
 			{
@@ -36,8 +34,7 @@ namespace DM_Assignment_8
 
 					UserNewClass userNew = new UserNewClass();
 					userNew.UserNew();
-					UserFileClass userFile = new UserFileClass();
-					userFile.UserFile();
+                    UserFileClass.UserFile();
 
 					break;
 				case 2:
@@ -46,7 +43,7 @@ namespace DM_Assignment_8
 					Console.WriteLine();
 					Console.WriteLine("Press enter to continue");
 					Console.ReadLine();
-					userNew.UserView();
+					//userNew.UserView();
 					break;
 				case 3:
 					Console.Clear();
@@ -54,8 +51,8 @@ namespace DM_Assignment_8
 					Console.WriteLine();
 					Console.WriteLine("Press enter to continue");
 					Console.ReadLine();
-					UserEditClass userEdit = new UserEditClass();
-					userEdit.UserEdit();
+					//UserEditClass userEdit = new UserEditClass();
+					//userEdit.UserEdit();
 					break;
 				case 4:
 					Console.Clear();

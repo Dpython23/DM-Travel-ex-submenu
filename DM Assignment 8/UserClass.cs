@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DM_Assignment_8
 {
-    public class UserClass
+    public  class UserClass
     {
         private string name;
         private int id;

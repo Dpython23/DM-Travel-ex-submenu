@@ -7,9 +7,9 @@ using static DM_Assignment_8.Program;
 
 namespace DM_Assignment_8
 {
-	public class UserNewClass
+	public  class UserNewClass
 	{
-		public void UserNew()
+		public  void UserNew()
 		{
 			Console.Write("Enter a name: ");
 			Console.WriteLine();
@@ -26,7 +26,7 @@ namespace DM_Assignment_8
 			Console.Clear();
 		}
 
-		public void UserView(UserClass newUser)
+		public  void UserView(UserClass newUser)
 		{
 			Console.WriteLine("List of users:");
 			Console.WriteLine();

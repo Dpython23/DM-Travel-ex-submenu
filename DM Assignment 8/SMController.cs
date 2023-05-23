@@ -13,6 +13,8 @@ namespace DM_Assignment_8
         
 		public static void SMController(int option)
 		{
+            int UOption;
+
             switch (option)
             {
                 case 1:
@@ -23,8 +25,7 @@ namespace DM_Assignment_8
                     Console.ReadLine();
                     Console.Clear();
 
-                    UserChoiceClass userChoice = new UserChoiceClass();
-                    UserChoiceClass.UserChoice();
+                 //   UserChoiceClass.UserChoice( UOption);
                     break;
                 case 2:
                     Console.Clear();
@@ -50,12 +51,9 @@ namespace DM_Assignment_8
                     Console.ReadLine();
                     Console.Clear();
 
-                    StartViewClass startView = new StartViewClass();
                     int selection = StartViewClass.StartView();
-                    StartControllerClass startController = new StartControllerClass();
                     StartControllerClass.StartController(selection);
 
-                    StartViewClass.StartView();
                     break;
             }
         }
