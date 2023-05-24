@@ -15,11 +15,8 @@ namespace DM_Assignment_8
             int TryAgain;
             bool Try = true;
 
-
-
             do
             {
-
                 Console.Write("Enter a name: ");
                 name = Console.ReadLine();
                 filename = name + ".json";
