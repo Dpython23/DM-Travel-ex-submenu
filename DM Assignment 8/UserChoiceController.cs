@@ -14,13 +14,8 @@ namespace DM_Assignment_8
 		{
 
 		int UOption = UserViewClass.User();
-		int selection;
+		//int selection;
 
-
-			/*public static UserChoiceClass()
-			{
-				StartControllerClass.StartController(selection);
-			}*/
 		}
 
 		public static void  UserChoice(int UOption)
@@ -33,11 +28,10 @@ namespace DM_Assignment_8
 					Console.WriteLine();
 					Console.WriteLine("Press enter to continue");
 					Console.ReadLine();
-					Console.Clear();
-
+					//Console.Clear();
 					UserNewClass userNew = new UserNewClass();
 					userNew.UserNew();
-					UserFileClass.UserFile();
+					//UserFileClass.UserFile();
 
 					break;
 				case 2:
