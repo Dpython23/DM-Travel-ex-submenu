@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 
 namespace DM_Assignment_8
 {
@@ -12,15 +7,15 @@ namespace DM_Assignment_8
 	{
 		public static void UserOpp()
 		{
-
-		int UOption = UserViewClass.User();
-		//int selection;
-
+			int UOption = UserViewClass.User();
+			UserChoiceClass.UserChoice(UOption);
 		}
 
 		public static void  UserChoice(int UOption)
 		{
-			switch (UOption)
+            UserNewClass userNew = new UserNewClass();
+
+            switch (UOption)
 			{
 				case 1:
 					Console.Clear();
@@ -28,10 +23,9 @@ namespace DM_Assignment_8
 					Console.WriteLine();
 					Console.WriteLine("Press enter to continue");
 					Console.ReadLine();
-					//Console.Clear();
-					UserNewClass userNew = new UserNewClass();
-					userNew.UserNew();
-					//UserFileClass.UserFile();
+					Console.Clear();
+					string name = userNew.UserNew();
+					UserFileClass.UserFile(name);
 
 					break;
 				case 2:
@@ -40,7 +34,7 @@ namespace DM_Assignment_8
 					Console.WriteLine();
 					Console.WriteLine("Press enter to continue");
 					Console.ReadLine();
-					//userNew.UserView();
+                    userNew.UserView();
 					break;
 				case 3:
 					Console.Clear();
@@ -61,10 +55,11 @@ namespace DM_Assignment_8
 					Console.Clear();
 					StartViewClass.StartView();
 					break;
+				default:
+					Console.WriteLine("Nah mate");
+					Console.ReadLine();
+					break;
 			}
 		}
-
-	
-
 	}
 }

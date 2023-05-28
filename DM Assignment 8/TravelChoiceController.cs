@@ -26,7 +26,7 @@ namespace DM_Assignment_8
 
                     UserNewClass userNew = new UserNewClass();
                     userNew.UserNew();
-                    UserFileClass.UserFile();
+                   // UserFileClass.UserFile();
 
                     break;
                 case 2:

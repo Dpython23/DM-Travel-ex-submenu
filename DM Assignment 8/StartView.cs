@@ -25,8 +25,8 @@ namespace DM_Assignment_8
                 Console.Clear();
                 Console.WriteLine("Please make your selection");
                 Console.WriteLine();
-                Console.WriteLine("Type 1 for Start ");
-                Console.WriteLine("Type 2 for Exit App");
+                Console.WriteLine("Type 1 and enter for Start ");
+                Console.WriteLine("Type 2 and enter for Exit App");
                 Console.WriteLine();
 
                 selection = Convert.ToInt16(Console.ReadLine());
@@ -37,7 +37,7 @@ namespace DM_Assignment_8
                 }
                 else
                 {
-                    Console.WriteLine("Please type 1 or 2 with enter only");
+                    Console.WriteLine("Please type 1 or 2 and enter only");
                     Console.ReadLine();
                     fin = true;
                 }

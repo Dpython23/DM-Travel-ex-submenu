@@ -7,9 +7,8 @@ namespace DM_Assignment_8
     {
 
 
-        public static void UserFile()
+        public static void UserFile(string name)
         {
-            string name;
             string filename;
             string path;
             int TryAgain;
@@ -17,7 +16,6 @@ namespace DM_Assignment_8
 
             do
             {
-                Console.Write("Enter a name: ");
                 name = Console.ReadLine();
                 filename = name + ".json";
                 path = @"C:\IT\TravExApp\" + filename;
@@ -42,7 +40,7 @@ namespace DM_Assignment_8
                     switch (TryAgain)
                     {
                         case 1:
-                            UserFile();
+                            UserFile(name);
                             break;
                         case 2:
                          //   StartControllerClass.StartController(selection);

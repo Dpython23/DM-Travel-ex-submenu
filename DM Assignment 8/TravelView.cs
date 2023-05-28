@@ -13,7 +13,7 @@ namespace DM_Assignment_8
 			Console.WriteLine("Type 1 for Travel");
 			Console.WriteLine("Type 2 for Travel and Expense");
 			Console.WriteLine("Type 3 for the Main Menu");
-		//	Console.WriteLine("Type 4 to edit " + name);
+			Console.WriteLine("Type 4 to edit " );
 			Console.WriteLine();
 			int TravEx = Convert.ToInt16(Console.ReadLine());
 			Console.Clear();

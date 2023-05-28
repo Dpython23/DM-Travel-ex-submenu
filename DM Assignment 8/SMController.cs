@@ -14,7 +14,6 @@ namespace DM_Assignment_8
 		public static void SMController(int option)
 		{
 			
-
 			switch (option)
 			{
 				case 1:
