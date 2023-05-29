@@ -20,15 +20,15 @@ namespace DM_Assignment_8
             Console.Clear();
             UserClass? newUser = new UserClass(name);
             //if the name does exist
-            if (name != null)
+
+
+            // 29/05/2023 check if the object exist in the json
+            if (CheckObjectExists(name))
             {
-                Console.WriteLine("Name already exist try again");
-                Console.ReadLine();
-                Console.Clear();
-                UserNew();
+                Console.WriteLine("An object with the name '{0}' already exists.", name);
+                Console.WriteLine("Please try again.");
             }
-            // Check if the file already exists
-            if (name == null)
+            else
             {
                 Console.WriteLine("A new user has been created");
                 Console.WriteLine();
